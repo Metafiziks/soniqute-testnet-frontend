@@ -3,26 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SoniQute Testnet Dashboard</title>
+  <title>SoniQute Testnet</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/SoniQute-III.png">
+  <meta property="og:title" content="SoniQute Testnet" />
+  <meta property="og:description" content="Bonding-curve song coins • gated testing • Abstract Sepolia" />
+  <meta property="og:image" content="https://soniqute.pamseternity.com/assets/SoniQute-Header.png" />
+  <meta property="og:url" content="https://soniqute.pamseternity.com" />
+  <meta name="twitter:card" content="summary_large_image" />
 </head>
 <body>
-  <div class="container">
-    <h1>🎧 SoniQute Testnet Progress</h1>
-    <div id="wallet-status">Connect your wallet...</div>
-    <button onclick="connectWallet()">🔗 Connect Wallet</button>
-
+  <header class="topbar">
+    <div class="nav-wrap">
+      <div class="brand">
+        <img src="assets/SoniQute-III.png" alt="SoniQute" class="logo">
+        <span class="brand-text">SoniQute Testnet</span>
+      </div>
+      <button class="cta" onclick="connectWallet()">Connect Wallet</button>
+    </div>
+  </header>
+  <section class="hero">
+    <img src="assets/SoniQute-Header.png" alt="SoniQute Header" class="hero-img">
+    <p class="hero-sub">Bonding-curve song coins • gated testing • Abstract Sepolia</p>
+  </section>
+  <main class="card">
+    <h1>🎧 Progress</h1>
+    <div id="wallet-status" class="muted">Connect your wallet...</div>
     <div class="progress-section">
-      <p><strong>Transactions:</strong> <span id="tx-count">0</span></p>
+      <div class="row">
+        <strong>Transactions</strong>
+        <span id="tx-count">0</span>
+      </div>
       <div class="progress-bar">
         <div id="progress-fill" class="progress-fill"></div>
       </div>
-      <p><strong>Tier:</strong> <span id="tier-label">None</span></p>
+      <div class="row">
+        <strong>Tier</strong>
+        <span id="tier-label">None</span>
+      </div>
     </div>
-
     <h2>🏆 Leaderboard</h2>
-    <ol id="leaderboard"></ol>
-  </div>
+    <ol id="leaderboard" class="list"></ol>
+    <h2>🪙 Buy tester</h2>
+    <div class="buy-box">
+      <input id="buy-amount" type="number" min="1" value="1" />
+      <button class="cta" onclick="buy()">Buy</button>
+      <div id="buy-status" class="muted small"></div>
+    </div>
+  </main>
+  <footer class="footer">
+    <a href="https://pamseternity.com" target="_blank" rel="noreferrer">pamseternity.com</a> • Abstract Sepolia (11124)
+  </footer>
   <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
   <script src="script.js"></script>
 </body>
