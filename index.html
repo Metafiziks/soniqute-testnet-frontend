@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SoniQute Testnet Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎧 SoniQute Testnet Progress</h1>
+    <div id="wallet-status">Connect your wallet...</div>
+    <button onclick="connectWallet()">🔗 Connect Wallet</button>
+
+    <div class="progress-section">
+      <p><strong>Transactions:</strong> <span id="tx-count">0</span></p>
+      <div class="progress-bar">
+        <div id="progress-fill" class="progress-fill"></div>
+      </div>
+      <p><strong>Tier:</strong> <span id="tier-label">None</span></p>
+    </div>
+
+    <h2>🏆 Leaderboard</h2>
+    <ol id="leaderboard"></ol>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
