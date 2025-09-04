@@ -1,5 +1,0 @@
-{
-  "redirects": [
-    { "source": "https://soniqute.pamseternity.xyz/:path*", "destination": "https://soniqute.pamseternity.com/:path*", "permanent": true }
-  ]
-}
